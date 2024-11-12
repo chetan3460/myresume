@@ -50,6 +50,7 @@
     "lenis": "^1.1.13",
     "split-type": "^0.3.4",
     "swiper": "^8.4.7",
-    "tinycolor2": "^1.6.0"
+    "tinycolor2": "^1.6.0",
+    "tsparticles-engine": "^2.12.0"
   }
 }

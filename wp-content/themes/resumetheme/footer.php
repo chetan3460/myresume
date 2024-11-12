@@ -111,7 +111,7 @@ $follow = get_field('follow_us', 'option');
                 </div>
             </div>
         </div>
-        <a href="#" class="footer__marquee" data-popup="contact">
+        <!-- <a href="#" class="footer__marquee" data-popup="contact">
             <div class="footer__marquee-wrap">
                 <?php if ($marque_text_1) : ?>
                     <div class="footer__marquee-item heading"> <?= $marque_text_1; ?>
@@ -140,7 +140,7 @@ $follow = get_field('follow_us', 'option');
                     </div>
                 </div>
             </div>
-        </a>
+        </a> -->
     </section>
 </footer>
 <!-- Go to top button -->

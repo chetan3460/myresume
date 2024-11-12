@@ -1,9 +1,11 @@
 
-import gsap from "gsap";
+import tinycolor from "tinycolor2";
+
+import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import SplitType from "split-type";
 import { Back } from "gsap";
-import tinycolor from "tinycolor2";
+
 gsap.registerPlugin(ScrollTrigger);
 
 export default class Animation {
@@ -306,5 +308,7 @@ export default class Animation {
       });
     }
   };
+
+
 
 }
