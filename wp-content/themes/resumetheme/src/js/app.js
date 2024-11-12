@@ -4,6 +4,8 @@ import DynamicImports from './components/DynamicImports';
 import Animation from './components/Animation';
 import lenis from './utils';
 import { xGetter, yGetter, xSetter, ySetter, lerp, pointerCurr } from './utils';
+import gsap from "gsap";
+gsap.registerPlugin(ScrollTrigger);
 
 export default new (class App {
   constructor() {
