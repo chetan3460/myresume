@@ -32,6 +32,8 @@ if (!empty($header_cta)) {
     <?php echo $body_scripts ?>
 
     <?php wp_body_open(); ?>
+
+
     <div class=" <?php if (wp_is_mobile()) { ?> mobile-device <?php } ?>">
         <!-- opening of wrapper div ends in footer.php -->
 
@@ -57,8 +59,8 @@ if (!empty($header_cta)) {
                     </div>
 
                     <!-- Menu -->
-                    <div class="header-module module-button">
-                        <div class=" header__links btn-solid btn-icon">
+                    <div class="header-module module-button" data-section-luminosity="dark">
+                        <div class=" header__links btn-solid btn-icon" data-section-luminosity="dark">
                             <?php
                             if (has_nav_menu('main-menu')) {
                                 wp_nav_menu(

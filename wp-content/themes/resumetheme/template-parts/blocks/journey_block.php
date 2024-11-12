@@ -9,19 +9,19 @@ include(locate_template('template-parts/blocks/hide_cosmetics.php', false, false
 if (($heading || $description) && !$hide_block):
 ?>
 
-    <section id="journey" class=" lqd-section module-sec journey--block bg-orange-100 min-h-100vh py-5 d-flex align-items-center justify-content-center" data-section-luminosity="light">
+    <section id="journey" class="lqd-section module-sec journey--block bg-orange-100 min-h-100vh py-5 d-flex align-items-center justify-content-center fade-in overflow-hidden" data-section-luminosity="light">
         <div class="">
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-12 sec-title-animation animation-style2">
                     <div class="journey--wrapper d-flex align-items-center justify-content-center flex-column gap-5 mb-5 text-center">
                         <?php if ($heading) : ?>
-                            <h2>
+                            <h2 class="title-animation">
                                 <?= $heading; ?>
                             </h2>
                         <?php endif; ?>
 
                         <?php if ($description) : ?>
-                            <p>
+                            <p class="fs-4 lh-base" letters-fade-in-random text-split>
                                 <?= $description; ?>
                             </p>
                         <?php endif; ?>
@@ -69,7 +69,6 @@ if (($heading || $description) && !$hide_block):
         </div>
 
     </section>
-
 
 
 

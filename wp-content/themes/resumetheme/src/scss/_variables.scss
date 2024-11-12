@@ -84,10 +84,9 @@ $cl-dark-orange: #eb2c00;
   --color-green-700: #2d5154;
 
   --color-aqua-100: #d4fffc;
-  // --color-aqua-700: #2d5154;
+  --color-aqua-700: #2a444f;
 
   --color-orange-100: #ffc29b;
-
   --color-brown-700: #5a220c;
 
   --color-gradient-start: #f42958;
@@ -97,6 +96,9 @@ $cl-dark-orange: #eb2c00;
   --color-gray-900: #141414;
   --color-red-100: #ffc1c5;
   --color-red-300: #ff4e5c;
+
+  --color-pink-100: #ffaac7;
+
   --color-slate-100: #e8fcff;
   --color-slate-200: #d5f5ff;
 }
@@ -120,6 +122,9 @@ $cl-dark-orange: #eb2c00;
 }
 .bg-orange-100 {
   background-color: var(--color-orange-100);
+}
+.bg-pink-100 {
+  background-color: var(--color-pink-100);
 }
 .transparent-bg {
   background-color: transparent;

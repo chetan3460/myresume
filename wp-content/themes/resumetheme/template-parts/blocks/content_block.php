@@ -9,22 +9,21 @@ include(locate_template('template-parts/blocks/hide_cosmetics.php', false, false
 
 if (($description) && !$hide_block) :
 ?>
-    <section id="quotes" class=" lqd-section module-sec quotes--block bg-aqua min-h-100vh py-5 d-flex align-items-center justify-content-center" data-section-luminosity="light">
+    <section id="quotes" class=" lqd-section module-sec quotes--block bg-aqua min-h-100vh py-5 d-flex align-items-center justify-content-center fade-in" data-section-luminosity="light">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-7">
+                    <!-- <p class="fs-5 lh-base text-uppercase fw-medium mb-2">My Moto</p> -->
 
-                    <div class="quotes--wrapper">
+                    <div class="quotes--wrapper reveal-type text-center">
                         <?php if ($description) : ?>
-                            <p class=""><?= $description; ?></p>
+                            <h2 class=""><?= $description; ?></h2>
                         <?php endif; ?>
-                        <!-- <p>I strive to maintain a seamless experience for my clients, delivering results that satisfy their business needs and drive increased traffic.</p> -->
-                        <img class="intro_mission-bg" src="<?php bloginfo('template_directory'); ?>/assets/images/quotes-bg.jpg" alt="">
-                        <!-- <video class="intro_mission-bg" autoplay muted loop id="myVideo">
-                            <source src="<?php bloginfo('template_directory'); ?>/assets/Infinity big (white on white).mp4" type="video/mp4">
-                        </video> -->
+
                     </div>
+                    <!-- <small class="fs-6 lh-base text-center text-uppercase fw-medium mt-4 d-block">— John Johnson</small> -->
                 </div>
+
             </div>
         </div>
 

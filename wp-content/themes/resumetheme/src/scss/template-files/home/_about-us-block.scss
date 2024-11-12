@@ -4,15 +4,26 @@
       color: var(--color-blue-700);
     }
     h3 {
-      // transform: translateX(6rem);
+      transform: translateX(6rem);
       @include font-rem(40px, 48px);
       margin: 0 10px;
 
-      .text-darkblue {
-        color: var(--color-blue-700);
+      .shape-circle {
       }
       @include bp(mobile) {
         @include font-rem(48px, 52px);
+      }
+      img {
+        @include size(3rem);
+      }
+      span {
+        // white-space: nowrap;
+        /* border: 2px solid #e5433f; */
+        background: var(--color-blue-700);
+        color: #fff;
+        border-radius: 5em;
+        margin: 2px 0;
+        padding: 0.1em 0.5em;
       }
     }
   }
@@ -64,69 +75,4 @@
       color: var(--color-blue-700);
     }
   }
-}
-
-/*--------------------------------------------------
-	Content Text Effects
----------------------------------------------------*/
-.light-section-container,
-.dark-section-container {
-  position: relative;
-  box-sizing: border-box;
-  width: 100%;
-  margin: 0 auto;
-}
-.title-moving-outer {
-  margin-left: calc(50% - 50vw) !important;
-  margin-right: calc(50% - 50vw) !important;
-  max-width: 1000% !important;
-  width: 100vw !important;
-}
-
-.title-moving-forward,
-.title-moving-backward {
-  clear: both;
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  padding: 0 6vw;
-  box-sizing: border-box;
-}
-
-.marquee-text-wrapper {
-  white-space: nowrap;
-  margin-left: calc(50% - 50vw) !important;
-  margin-right: calc(50% - 50vw) !important;
-  max-width: 1000% !important;
-  width: 100vw !important;
-}
-
-.marquee-text {
-  font-weight: 500;
-  display: inline-block;
-  color: #000;
-}
-
-// .marquee-text:before {
-//   content: ".";
-//   color: transparent;
-// }
-
-.light-content .marquee-text,
-.dark-section .rolling-text {
-  color: #fff;
-}
-
-.light-content .light-section .marquee-text {
-  color: #000;
-}
-
-.marquee-text-wrapper span {
-  // white-space: nowrap;
-  /* border: 2px solid #e5433f; */
-  background: var(--color-blue-700);
-  color: #fff;
-  border-radius: 5em;
-  margin: 2px 0;
-  padding: 0.1em 0.5em;
 }

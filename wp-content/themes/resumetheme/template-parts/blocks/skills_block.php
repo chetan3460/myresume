@@ -11,18 +11,18 @@ if (($heading || $description) && !$hide_block):
     <!-- Banner Block -->
 
 
-    <section id="skills" class="skills--block lqd-section module-sec bg-green-100 min-h-100vh py-5" data-section-luminosity="light">
+    <section id="skills" class="skills--block lqd-section module-sec bg-green-100 min-h-100vh py-5 fade-in overflow-hidden" data-section-luminosity="light">
         <div class="container">
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 sec-title-animation animation-style2">
                     <div class="text-center d-flex flex-column gap-md-5 gap-4 ">
                         <?php if ($heading) : ?>
-                            <h2>
+                            <h2 class="title-animation">
                                 <?= $heading; ?>
                             </h2>
                         <?php endif; ?>
                         <?php if ($description) : ?>
-                            <p class="fs-5 lh-base">
+                            <p class="fs-5 lh-base" letters-fade-in-random text-split>
                                 <?= $description; ?>
                             </p>
                         <?php endif; ?>

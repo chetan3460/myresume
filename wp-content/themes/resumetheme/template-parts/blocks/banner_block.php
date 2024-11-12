@@ -14,14 +14,14 @@ if (($banner_title || $banner_description) && !$hide_block):
 
 
     <!-- Start Banner -->
-    <section id="home" class="lqd-section  banner--block d-flex align-items-center justify-content-center min-h-100vh bg-purple-100 w-100 position-relative"
+    <section id="home" class="lqd-section  banner--block d-flex align-items-center justify-content-center min-h-100vh bg-purple-100 w-100 position-relative "
         data-section-luminosity="light">
 
         <div class="container">
             <div class="row">
-                <div class="col col-12 relative text-center">
+                <div class="col col-12 relative text-center ">
                     <?php if ($banner_subtitle) : ?>
-                        <p class="banner--intro-text fs-3 fw-bold mx-auto">
+                        <p class="banner--intro-text fs-3 fw-bold mx-auto text-uppercase">
                             <?= $banner_subtitle; ?>
                             <!-- hey,i’m chetan. -->
                         </p>
@@ -35,7 +35,7 @@ if (($banner_title || $banner_description) && !$hide_block):
                     <?php endif; ?>
 
                     <?php if ($banner_description) : ?>
-                        <p class="text-uppercase fw-semibold mt-5 mx-auto">
+                        <p class="text-description text-uppercase fw-semibold mt-5 mx-auto">
                             <?= $banner_description; ?>
                         </p>
                     <?php endif; ?>

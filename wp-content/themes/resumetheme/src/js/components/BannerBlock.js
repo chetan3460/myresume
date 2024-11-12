@@ -16,7 +16,7 @@ export default class BannerSlider {
   }
 
   bindEvents = () => {
-    const captionTitle = $(".banner--block .banner--main-heading h1");
+    const captionTitle = $(".banner--block h1");
 
     function clearAndSplitText(element) {
       const splitText = new SplitType(element, {
@@ -37,13 +37,13 @@ export default class BannerSlider {
       const header = $("header .header--wrapper");
       const bannerBlock = $(".banner--block");
       const bannerSlider = $(".banner--block");
-      const captionTitle = $(".banner--main-heading h1");
-      const captionSubTitle = $(".banner--block .hero-banner--caption");
+      const captionTitle = $(".banner--block h1");
+      const captionSubTitle = $(".banner--block .banner--intro-text");
 
       // const bannerFreeSliderTitle = $(".banner-free-slide h3")
 
 
-      const videoBlock = $(".banner--block .btn");
+      const videoBlock = $(".banner--block .text-description");
 
       const duration2000 = 0.2;
       const duration4000 = 0.4;

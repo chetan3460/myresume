@@ -1,3 +1,4 @@
+
 import Header from './components/Header';
 import DynamicImports from './components/DynamicImports';
 import Animation from './components/Animation';
@@ -53,20 +54,7 @@ export default new (class App {
   bindEvents = () => {
 
 
-    const intro_mission_bg = document.querySelectorAll('.intro_mission-bg')
 
-    gsap.to(intro_mission_bg, {
-      y: '-50%',
-      stagger: { amount: 0.02 },
-      scrollTrigger: {
-        trigger: intro_mission_bg,
-        start: 'top 80%',
-        end: 'bottom 0%',
-        scrub: 1,
-        ease: 'power2.Out',
-        //toggleActions: "play none none reverse",
-      },
-    })
     // Curssor 
     function handleFooterCursor() {
       const footerCursorWrap = '.footer__cursor';
@@ -217,42 +205,67 @@ export default new (class App {
     });
 
 
+    // Slowed Pin Section
+    gsap.utils.toArray('.slowed-pin').forEach((slowedPin) => {
 
+      const slowedText = slowedPin.querySelector('.slowed-text');
+      const slowedTextWrapper = slowedPin.querySelector('.slowed-text-wrapper');
+      const slowedImagesWrapper = slowedPin.querySelector('.slowed-images');
+      const slowedImages = slowedPin.querySelectorAll('.slowed-image img');
 
+      gsap.to(slowedText, {
+        scrollTrigger: {
+          trigger: slowedText,
+          scrub: true,
+          pin: true,
+          start: "top top",
+          end: function () {
+            const durationHeight = slowedImagesWrapper.offsetHeight - window.innerHeight;
+            return "+=" + durationHeight;
+          },
+        },
+        y: window.innerHeight - slowedText.offsetHeight
+      });
 
-    // Roling Text	
-    let direction = 1;
-    const marqueeFw = roll(".marquee-text.fw", { duration: 30 });
-    const marqueeBw = roll(".marquee-text.bw", { duration: 30 }, true);
+      gsap.from(slowedTextWrapper, {
+        scrollTrigger: {
+          trigger: slowedText,
+          scrub: true,
+          start: "top top",
+          end: function () {
+            const durationHeight = slowedImagesWrapper.offsetHeight - window.innerHeight;
+            return "+=" + durationHeight;
+          },
+        },
+        y: 100
+      });
 
+      slowedImages.forEach((sImage) => {
+        gsap.to(sImage, {
+          scrollTrigger: {
+            trigger: sImage,
+            scrub: true,
+            start: "top 100%",
+          },
+          scale: 1,
+          y: 0
+        });
+      });
 
-    scroll = ScrollTrigger.create({
-      onUpdate(self) {
-        if (self.direction !== direction) {
-          direction *= -1;
-          gsap.to([marqueeFw, marqueeBw], { timeScale: direction, overwrite: true });
-        }
-      }
     });
 
-    function roll(targets, vars, reverse) {
-      const tl = gsap.timeline({
-        repeat: -1,
-        onReverseComplete() {
-          this.totalTime(this.rawTime() + this.duration() * 10);
-        }
-      });
-      vars = vars || {};
-      vars.ease || (vars.ease = "none");
-      gsap.utils.toArray(targets).forEach(el => {
-        let clone = el.cloneNode(true);
-        el.parentNode.appendChild(clone);
-        gsap.set(clone, { position: "absolute", top: el.offsetTop, left: el.offsetLeft + (reverse ? -el.offsetWidth : el.offsetWidth) });
-        gsap.to(clone.querySelectorAll("span"), { duration: 0.7, y: 0, opacity: 1, delay: 0.5, ease: Power2.easeOut });
-        tl.to([el, clone], { xPercent: reverse ? 100 : -100, ...vars }, 0);
-      });
-      return tl;
-    }
+
+
+
+    $('[data-popup="contact"]').on('click', function (e) {
+      e.preventDefault()
+      $('.popup').addClass('active')
+      lenis.stop()
+    })
+
+
+
+
 
 
   };

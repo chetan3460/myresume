@@ -28,7 +28,7 @@ $follow = get_field('follow_us', 'option');
                     <div class="col-12 d-flex align-items-center justify-content-between flex-wrap gap-lg-0 gap-5 mb-lg-10 mb-6">
                         <div class="">
                             <?php if ($contact_title) : ?>
-                                <h2 class="text-grey  text-dark module-btn">
+                                <h2 class="text-grey  text-dark module-btn folks-text">
                                     <?= $contact_title; ?>
                                 </h2>
                             <?php endif; ?>
@@ -111,7 +111,7 @@ $follow = get_field('follow_us', 'option');
                 </div>
             </div>
         </div>
-        <a href="#" class="footer__marquee" data-popup="contact">
+        <!-- <a href="#" class="footer__marquee" data-popup="contact">
             <div class="footer__marquee-wrap">
                 <?php if ($marque_text_1) : ?>
                     <div class="footer__marquee-item heading"> <?= $marque_text_1; ?>
@@ -140,7 +140,7 @@ $follow = get_field('follow_us', 'option');
                     </div>
                 </div>
             </div>
-        </a>
+        </a> -->
     </section>
 </footer>
 <!-- Go to top button -->

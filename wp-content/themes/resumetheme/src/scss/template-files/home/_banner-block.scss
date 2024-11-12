@@ -16,41 +16,34 @@
         @include font-rem(65px, 70px);
       }
     }
-
+    .line {
+      transform: translateY(50%) rotate(0deg) skewX(0deg) skewY(0deg) scaleX(1)
+        scaleY(1);
+      opacity: 0;
+    }
+    .scale-125 {
+      transform: translate(0, 0) rotate(0deg) skewX(0deg) skewY(0deg)
+        scaleX(1.25) scaleY(1.25);
+    }
+    .opacity-0 {
+      opacity: 0;
+    }
     h2,
     p {
       color: var(--color-purple-700);
     }
     p {
       max-width: 400px;
+      opacity: 0;
+    }
+    .text-description {
+      transform: translate(0, 0) rotate(0deg) skewX(0deg) skewY(0deg)
+        scaleX(0.75) scaleY(0.75);
     }
   }
   &--intro-text {
     font-family: $headingFontFamily;
   }
-}
-.ld-fh-element {
-  background: -webkit-linear-gradient(
-    111deg,
-    #0bccee 0%,
-    rgb(235, 173, 105) 41.082802547770704%,
-    rgb(194, 80, 80) 79.29936305732484%,
-    #ac1de1 100%
-  );
-  background: linear-gradient(
-    111deg,
-    #0bccee 0%,
-    rgb(235, 173, 105) 41.082802547770704%,
-    rgb(194, 80, 80) 79.29936305732484%,
-    #ac1de1 100%
-  );
-}
-.ld-gradient-heading,
-.gradient-word {
-  -webkit-background-clip: text !important;
-  background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  text-fill-color: transparent !important;
 }
 
 #lqd-site-content {

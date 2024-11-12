@@ -122,7 +122,7 @@
                             "label": "Rest heading",
                             "name": "rest_heading",
                             "aria-label": "",
-                            "type": "text",
+                            "type": "textarea",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -133,10 +133,10 @@
                             },
                             "default_value": "",
                             "maxlength": "",
-                            "allow_in_bindings": 0,
+                            "allow_in_bindings": 1,
+                            "rows": "",
                             "placeholder": "",
-                            "prepend": "",
-                            "append": ""
+                            "new_lines": ""
                         },
                         {
                             "key": "field_6732dcccade80",
@@ -726,6 +726,87 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_67332d907041e": {
+                    "key": "layout_67332d907041e",
+                    "name": "project_block",
+                    "label": "Project Block",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_67332d9d70420",
+                            "label": "Description",
+                            "name": "description",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "allow_in_bindings": 0,
+                            "rows": "",
+                            "placeholder": "",
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_67332daa70421",
+                            "label": "Project Items",
+                            "name": "project_items",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "table",
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": "",
+                            "button_label": "Add Row",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_67332dbb70422",
+                                    "label": "Project Images",
+                                    "name": "project_images",
+                                    "aria-label": "",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "id",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": "",
+                                    "allow_in_bindings": 0,
+                                    "preview_size": "medium",
+                                    "parent_repeater": "field_67332daa70421"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -758,5 +839,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1731391038
+    "modified": 1731408557
 }
