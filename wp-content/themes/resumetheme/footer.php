@@ -10,7 +10,7 @@ $follow = get_field('follow_us', 'option');
 
 ?>
 <footer id="site-footer" class="main-footer footer" data-sticky-footer="true">
-    <section id="contact" class="lqd-section footer-content" data-section-luminosity="dark">
+    <section id="contact" class="lqd-section footer-content lqd-section module-sec bg-green-100" data-section-luminosity="light">
         <div class="footer__inner py-lg-10  bg-slate-100">
             <div class="container">
                 <div class="row items-center">
